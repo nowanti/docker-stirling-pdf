@@ -9,6 +9,11 @@ on:
 
 env:
   DOCKER_CLI_EXPERIMENTAL: "enabled"
+  # PLATFORM: linux/amd64, linux/arm/v7, linux/arm64/v8
+  PLATFORM: linux/amd64, linux/arm64
+  IMAGES: |
+    soulteary/cronicle
+    ghcr.io/soulteary/cronicle
 
 jobs:
 
@@ -24,9 +29,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@v4
       with:
-        images: |
-          soulteary/cronicle
-          ghcr.io/soulteary/cronicle
+        images: ${{ env.IMAGES }}
         tags: |
           type=schedule
           type=ref,event=branch
@@ -59,8 +62,7 @@ jobs:
       uses: docker/build-push-action@v4
       with:
         context: ./docker/
-        # platforms: linux/amd64, linux/arm/v7, linux/arm64/v8
-        platforms: linux/amd64, linux/arm64
+        platforms: ${{ env.PLATFORM }}
         push: true
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
