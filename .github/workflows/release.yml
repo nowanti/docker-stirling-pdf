@@ -12,8 +12,8 @@ env:
   # PLATFORM: linux/amd64, linux/arm/v7, linux/arm64/v8
   PLATFORM: linux/amd64, linux/arm64
   IMAGES: |
-    soulteary/cronicle
-    ghcr.io/soulteary/cronicle
+    nowanti/stirling-pdf
+    ghcr.io/nowanti/stirling-pdf
 
 jobs:
 
