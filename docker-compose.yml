@@ -1,7 +1,7 @@
-version: '3.3'
+# version: '3.3'
 services:
   stirling-pdf:
-    image: nowanti/stirling-pdf:0.37.0
+    image: nowanti/stirling-pdf:latest
     ports:
       - '8080:8080'
     volumes:
@@ -14,6 +14,7 @@ services:
       - INSTALL_BOOK_AND_ADVANCED_HTML_OPS=false
       - LANGS=zh_CN
       - TZ=Asia/Shanghai
+      - JAVA_TOOL_OPTIONS=-XX:UseSVE=0
     logging:
       driver: "json-file"
       options:

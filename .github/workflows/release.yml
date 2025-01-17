@@ -3,9 +3,10 @@ name: Docker Build
 on:
   workflow_dispatch:
   push:
-    branches: [ "main" ]
-    paths: [ "docker/**" ]
-    tags: [ "v*.*.*" ]
+    # branches: [ "main" ]
+    # paths: [ "docker/**" ]
+    # tags: [ "v*.*.*" ]
+    tags: [ "*.*.*" ]
 
 env:
   DOCKER_CLI_EXPERIMENTAL: "enabled"
