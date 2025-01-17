@@ -15,7 +15,6 @@ services:
       - INSTALL_BOOK_AND_ADVANCED_HTML_OPS=false
       - LANGS=zh_CN
       - TZ=Asia/Shanghai
-      - JAVA_TOOL_OPTIONS=-XX:UseSVE=0
     logging:
       driver: "json-file"
       options:
