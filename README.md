@@ -56,10 +56,10 @@ docker-compose up -d
 
 - 端口: 默认使用 8080 端口
 - 数据目录: 容器内的 `/usr/share/stirling-pdf/data` 目录用于存储临时文件
-- 环境变量: 支持通过环境变量配置系统参数，详见 [配置文档](https://docs.stirlingpdf.com/configuration)
+- 环境变量: 支持通过环境变量配置系统参数，详见 [配置文档](https://docs.stirlingpdf.com/Advanced%20Configuration/How%20to%20add%20configurations/)
 
 ## 相关链接
 
 - [Stirling-PDF 项目主页](https://github.com/Stirling-Tools/Stirling-PDF)
 - [官方文档](https://docs.stirlingpdf.com/)
-- [Docker Hub](https://hub.docker.com/r/frooodle/s-pdf)
+- [Docker Hub](https://hub.docker.com/r/Stirling-Tools/Stirling-PDF)
